@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Köy Pazarı - Doğal Yöresel Ürünler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌾</span>
+                <div>
+                    <h1>Köy Pazarı</h1>
+                    <p class="tagline">Doğadan sofranıza</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#anasayfa">Anasayfa</a>
+                <a href="#urunler">Ürünler</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <button class="cart-btn" id="cartBtn" aria-label="Sepeti aç">
+                <span class="cart-icon">🧺</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="anasayfa" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h2>Köyden <span class="accent">Doğrudan</span> Sofranıza</h2>
+                <p>Katkısız, organik, taze yöresel ürünler. Ninemin bahçesinden kopup gelen lezzetler artık bir tık uzağınızda.</p>
+                <a href="#urunler" class="btn btn-primary">Ürünleri Keşfet</a>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-card">
+                    <span>🥚</span>
+                    <span>🍎</span>
+                    <span>🍯</span>
+                    <span>🧀</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container features-grid">
+            <div class="feature">
+                <div class="feature-icon">🌱</div>
+                <h3>%100 Doğal</h3>
+                <p>Hiçbir kimyasal katkı veya koruyucu madde kullanılmaz.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚜</div>
+                <h3>Taze Hasat</h3>
+                <p>Siparişiniz alındıktan sonra köyden toplanıp gönderilir.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Üreticiye Destek</h3>
+                <p>Doğrudan köylüden alır, emeğin karşılığını veririz.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <h3>Hızlı Teslimat</h3>
+                <p>Türkiye'nin her yerine soğuk zincirle güvenli teslimat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="urunler" class="products-section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Yöresel Ürünlerimiz</h2>
+                <p>Köyün en seçkin, doğal ve taze ürünlerini sizin için bir araya getirdik.</p>
+            </div>
+
+            <div class="category-filter" id="categoryFilter">
+                <button class="filter-btn active" data-category="hepsi">Hepsi</button>
+                <button class="filter-btn" data-category="sut">Süt Ürünleri</button>
+                <button class="filter-btn" data-category="meyve">Meyve & Sebze</button>
+                <button class="filter-btn" data-category="yumurta">Yumurta</button>
+                <button class="filter-btn" data-category="bal">Bal & Reçel</button>
+                <button class="filter-btn" data-category="tahil">Tahıl & Bakliyat</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="about">
+        <div class="container about-inner">
+            <div class="about-text">
+                <h2>Hikâyemiz</h2>
+                <p>Köy Pazarı, Anadolu'nun dört bir yanındaki küçük üreticileri şehirdeki ailelerle buluşturmak amacıyla kuruldu. Her ürünümüzün ardında emekle çalışan bir çiftçi, bir köylü, bir ana var.</p>
+                <p>Tavuklarımız çayırlarda koşar, inekler otlaklarda otlar, arılar kekik kokulu dağ çiçeklerinden bal toplar. Sofranıza gelen her lezzet, doğanın ve emeğin ortak eseridir.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <strong>120+</strong>
+                        <span>Köy Üreticisi</span>
+                    </div>
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>Doğal Ürün</span>
+                    </div>
+                    <div class="stat">
+                        <strong>10.000+</strong>
+                        <span>Mutlu Müşteri</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual" aria-hidden="true">
+                <div class="barn">
+                    <div class="barn-roof"></div>
+                    <div class="barn-body">
+                        <div class="barn-door"></div>
+                        <div class="barn-window"></div>
+                        <div class="barn-window right"></div>
+                    </div>
+                    <div class="grass"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <div class="section-head">
+                <h2>Bize Ulaşın</h2>
+                <p>Sorularınız veya sipariş bilgisi için bizimle iletişime geçin.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><strong>📍 Adres:</strong> Yeşil Vadi Köyü, Anadolu</p>
+                    <p><strong>📞 Telefon:</strong> 0 (850) 123 45 67</p>
+                    <p><strong>✉️ E-posta:</strong> merhaba@koypazari.com</p>
+                    <p><strong>🕒 Çalışma:</strong> Pazartesi - Cumartesi 09:00 - 18:00</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Adınız" required>
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <textarea placeholder="Mesajınız" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Köy Pazarı — Doğanın en taze hâli ile sofralarınızda. 🌾</p>
+        </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button class="cart-close" id="cartClose" aria-label="Sepeti kapat">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Sepetiniz şu an boş. 🧺</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <strong id="cartTotal">0,00 ₺</strong>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkoutBtn">Siparişi Tamamla</button>
+        </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
