@@ -3,72 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badem Dükkânı - Doğal Datça Bademi ve Badem Ürünleri</title>
+    <title>Bademli — Anadolu'nun En Taze Badem Ürünleri</title>
+    <meta name="description" content="Datça, Nevşehir ve Elazığ'ın yerli badem bahçelerinden; çiğ, kavrulmuş, ezme, süt, un ve daha fazlası. Katkısız, doğal, taze.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <div class="logo">
-                <span class="logo-icon">🌰</span>
-                <div>
-                    <h1>Badem Dükkânı</h1>
-                    <p class="tagline">Ağaçtan tabağınıza</p>
+            <a class="logo" href="#anasayfa">
+                <span class="logo-mark">
+                    <svg viewBox="0 0 40 40" width="28" height="28" fill="none" aria-hidden="true">
+                        <path d="M20 4c6 0 14 6 14 16s-6 16-14 16S6 30 6 20 14 4 20 4z" fill="currentColor" opacity="0.15"/>
+                        <path d="M20 8c4.5 0 10 4.5 10 12s-4.5 12-10 12S10 27.5 10 20 15.5 8 20 8z" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M20 12v16M15 16c2 2 8 2 10 0M15 24c2-2 8-2 10 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <div class="logo-text">
+                    <span class="logo-name">Bademli</span>
+                    <span class="logo-tag">Anadolu badem atölyesi</span>
                 </div>
-            </div>
+            </a>
             <nav class="main-nav">
                 <a href="#anasayfa">Anasayfa</a>
                 <a href="#urunler">Ürünler</a>
-                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#hakkimizda">Hikâyemiz</a>
                 <a href="#iletisim">İletişim</a>
             </nav>
-            <button class="cart-btn" id="cartBtn" aria-label="Sepeti aç">
-                <span class="cart-icon">🧺</span>
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
+            <div class="header-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Sepeti aç">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <section id="anasayfa" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1711049138926-47be4ea848da?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600" alt="">
+        </div>
         <div class="container hero-inner">
-            <div class="hero-text">
-                <h2>Anadolu'nun <span class="accent">en taze</span> bademi</h2>
-                <p>Datça'dan Nevşehir'e, Türkiye'nin dört bir yanındaki badem bahçelerinden; çiğ, kavrulmuş, ezme, süt ve daha fazlası. Katkısız, doğal ve taze.</p>
-                <a href="#urunler" class="btn btn-primary">Ürünleri Keşfet</a>
-            </div>
-            <div class="hero-visual" aria-hidden="true">
-                <div class="hero-card">
-                    <span>🌰</span>
-                    <span>🥜</span>
-                    <span>🍫</span>
-                    <span>🥛</span>
+            <div class="hero-content">
+                <span class="eyebrow">🌸 2026 Yeni Hasat</span>
+                <h1>Ağaçtan <em>doğrudan</em><br>sofranıza badem</h1>
+                <p>Datça yarımadasının rüzgârlı bahçelerinden, Nevşehir'in volkanik topraklarından — elle toplanmış, katkısız, taze badem ve badem ürünleri.</p>
+                <div class="hero-actions">
+                    <a href="#urunler" class="btn btn-primary">
+                        Ürünleri Keşfet
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#hakkimizda" class="btn btn-ghost">Hikâyemiz</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <strong>%100</strong>
+                        <span>Katkısız</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>40+</strong>
+                        <span>Yıllık Ağaç</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>15K+</strong>
+                        <span>Mutlu Müşteri</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="features">
-        <div class="container features-grid">
-            <div class="feature">
-                <div class="feature-icon">🌳</div>
-                <h3>Yerli Bahçe</h3>
-                <p>Datça, Nevşehir ve Elazığ'ın yerli badem bahçelerinden doğrudan hasat.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">✨</div>
-                <h3>Katkısız</h3>
-                <p>Koruyucu, parlatıcı veya yapay aroma yok. Sadece badem.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🥜</div>
-                <h3>Taze Kavrum</h3>
-                <p>Siparişten sonra kavrulur, aroması tazeliğini bozmaz.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🚚</div>
-                <h3>Hızlı Kargo</h3>
-                <p>Türkiye'nin her yerine vakumlu, özenli paketleme ile gönderim.</p>
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 6 10 6 14a6 6 0 0 0 12 0c0-4-3-8-6-12z"/><path d="M12 14v8"/></svg>
+                    </div>
+                    <h3>Yerli Bahçe</h3>
+                    <p>Datça, Nevşehir, Elazığ bahçelerinden direkt hasat.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h3>Katkısız</h3>
+                    <p>Koruyucu, parlatıcı ve yapay aroma kullanılmaz.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M6 18V9a6 6 0 0 1 12 0v9M9 9h6"/></svg>
+                    </div>
+                    <h3>Taze Kavrum</h3>
+                    <p>Sipariş sonrası kavrulur, aroması kaybolmaz.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7"/><circle cx="6" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
+                    </div>
+                    <h3>Hızlı Kargo</h3>
+                    <p>Vakumlu, özenli paketleme ile 1-2 gün içinde.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -76,17 +120,18 @@
     <section id="urunler" class="products-section">
         <div class="container">
             <div class="section-head">
-                <h2>Badem Ürünlerimiz</h2>
-                <p>Çiğ badem, kavrulmuş çeşitler, badem ezmesi, sütü, unu ve özel lezzetler — hepsi tek çatı altında.</p>
+                <span class="eyebrow eyebrow-dark">Koleksiyonumuz</span>
+                <h2>Badem <em>Ürünlerimiz</em></h2>
+                <p>16 farklı lezzet — çiğ bademden badem ezmesine, sütten özel hediye kutusuna kadar hepsi tek çatı altında.</p>
             </div>
 
             <div class="category-filter" id="categoryFilter">
                 <button class="filter-btn active" data-category="hepsi">Hepsi</button>
                 <button class="filter-btn" data-category="cig">Çiğ Badem</button>
                 <button class="filter-btn" data-category="kavrulmus">Kavrulmuş</button>
-                <button class="filter-btn" data-category="ezme">Ezme & Krema</button>
-                <button class="filter-btn" data-category="sut">Süt & Yağ</button>
-                <button class="filter-btn" data-category="un">Un & Tatlı</button>
+                <button class="filter-btn" data-category="ezme">Ezme &amp; Krema</button>
+                <button class="filter-btn" data-category="sut">Süt &amp; Yağ</button>
+                <button class="filter-btn" data-category="un">Un &amp; Tatlı</button>
                 <button class="filter-btn" data-category="ozel">Özel Çeşitler</button>
             </div>
 
@@ -96,80 +141,155 @@
 
     <section id="hakkimizda" class="about">
         <div class="container about-inner">
-            <div class="about-text">
-                <h2>Bademin Hikâyesi</h2>
-                <p>Badem Dükkânı, Datça yarımadasının rüzgâr almış bahçelerinden Nevşehir'in volkanik topraklarına kadar Anadolu'nun en özel badem ağaçlarını aile sofralarınıza taşır. Her dal, her çekirdek elimizden geçer.</p>
-                <p>Bademlerimiz ilkbaharın son soğuklarında çiçek açar, yazın güneşinde olgunlaşır, elle toplanır ve doğal yollarla kurutulur. Hiçbir kimyasal işleme tabi tutulmaz. İster çiğ, ister kavrulmuş, ister ezme olarak — lezzetin ardındaki emek hep aynı.</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <strong>40+</strong>
-                        <span>Yıllık Ağaç</span>
-                    </div>
-                    <div class="stat">
-                        <strong>25+</strong>
-                        <span>Ürün Çeşidi</span>
-                    </div>
-                    <div class="stat">
-                        <strong>15.000+</strong>
-                        <span>Mutlu Müşteri</span>
-                    </div>
+            <div class="about-visual">
+                <img src="https://images.unsplash.com/photo-1649835655625-cfcc16d53a1a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=900" alt="Pembe çiçek açmış badem ağacı" loading="lazy">
+                <div class="about-badge">
+                    <strong>2015</strong>
+                    <span>Kuruluşumuz</span>
                 </div>
             </div>
-            <div class="about-visual" aria-hidden="true">
-                <div class="almond-tree">
-                    <div class="tree-foliage"></div>
-                    <div class="tree-foliage secondary"></div>
-                    <div class="tree-blossoms">🌸 🌸 🌸</div>
-                    <div class="tree-trunk"></div>
-                    <div class="ground"></div>
-                </div>
+            <div class="about-text">
+                <span class="eyebrow eyebrow-dark">Hikâyemiz</span>
+                <h2>Anadolu'nun ruhunu <em>ağaçtan</em> alırız</h2>
+                <p>Bademli, Datça yarımadasının rüzgârlı bahçelerinden Nevşehir'in volkanik topraklarına kadar Anadolu'nun en özel badem ağaçlarını aile sofralarınıza taşır. Her dal, her çekirdek elimizden geçer.</p>
+                <p>Bademlerimiz ilkbaharın son soğuklarında çiçek açar, yazın güneşinde olgunlaşır, elle toplanır ve doğal yollarla kurutulur. Hiçbir kimyasal işleme tabi tutulmaz — ister çiğ, ister kavrulmuş, ister ezme olarak; lezzetin ardındaki emek hep aynıdır.</p>
+                <ul class="about-list">
+                    <li><span>✓</span> %100 yerli, ata tohumu badem çeşitleri</li>
+                    <li><span>✓</span> GDO'suz ve kimyasal işlem yok</li>
+                    <li><span>✓</span> Üreticiye adil ödeme</li>
+                    <li><span>✓</span> Vakumlu, taze paketleme</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow eyebrow-dark">Müşterilerimiz</span>
+                <h2>Sofralara <em>dokunan</em> lezzet</h2>
+            </div>
+            <div class="testimonials-grid">
+                <figure class="testimonial">
+                    <div class="stars" aria-label="5 yıldız">★★★★★</div>
+                    <blockquote>Hayatımda içtiğim en taze badem sütü. Çocuklarım bile kutunun dibini yapıyor.</blockquote>
+                    <figcaption>
+                        <strong>Ayşe K.</strong>
+                        <span>İstanbul</span>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial">
+                    <div class="stars" aria-label="5 yıldız">★★★★★</div>
+                    <blockquote>Badem ezmesi kahvaltılarımın yıldızı oldu. %100 badem, hiç ekleme yok — tam istediğim gibi.</blockquote>
+                    <figcaption>
+                        <strong>Mehmet D.</strong>
+                        <span>Ankara</span>
+                    </figcaption>
+                </figure>
+                <figure class="testimonial">
+                    <div class="stars" aria-label="5 yıldız">★★★★★</div>
+                    <blockquote>Datça bademinin aromasını bu kadar net hissettiren başka bir marka bulamadım. Hızlı da geldi.</blockquote>
+                    <figcaption>
+                        <strong>Zeynep A.</strong>
+                        <span>İzmir</span>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <section id="iletisim" class="contact">
         <div class="container">
-            <div class="section-head">
-                <h2>Bize Ulaşın</h2>
-                <p>Toptan sipariş, özel kutu veya ürünler hakkında soru için bize yazın.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p><strong>📍 Adres:</strong> Datça Bahçeleri, Muğla</p>
-                    <p><strong>📞 Telefon:</strong> 0 (850) 123 45 67</p>
-                    <p><strong>✉️ E-posta:</strong> merhaba@bademdukkani.com</p>
-                    <p><strong>🕒 Çalışma:</strong> Pazartesi - Cumartesi 09:00 - 18:00</p>
+            <div class="contact-card">
+                <div class="contact-left">
+                    <span class="eyebrow">İletişim</span>
+                    <h2>Bir fincan kahve <em>eşliğinde</em> konuşalım</h2>
+                    <p>Toptan sipariş, özel kutu tasarımı veya ürünlerimiz hakkında her türlü soru için bize yazabilirsiniz.</p>
+                    <ul class="contact-info">
+                        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Datça Bahçeleri, Muğla</li>
+                        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0 (850) 123 45 67</li>
+                        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg> merhaba@bademli.com</li>
+                        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Pazartesi - Cumartesi 09:00 - 18:00</li>
+                    </ul>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Adınız" required>
-                    <input type="email" placeholder="E-posta adresiniz" required>
-                    <textarea placeholder="Mesajınız" rows="4" required></textarea>
-                    <button type="submit" class="btn btn-primary">Gönder</button>
+                    <label>
+                        Adınız
+                        <input type="text" placeholder="Adınız Soyadınız" required>
+                    </label>
+                    <label>
+                        E-posta
+                        <input type="email" placeholder="ornek@eposta.com" required>
+                    </label>
+                    <label>
+                        Mesajınız
+                        <textarea placeholder="Nasıl yardımcı olabiliriz?" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary btn-full">Mesaj Gönder</button>
                 </form>
             </div>
         </div>
     </section>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Badem Dükkânı — Ağaçtan size en taze hâliyle. 🌰</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">
+                    <svg viewBox="0 0 40 40" width="24" height="24" fill="none" aria-hidden="true">
+                        <path d="M20 8c4.5 0 10 4.5 10 12s-4.5 12-10 12S10 27.5 10 20 15.5 8 20 8z" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M20 12v16M15 16c2 2 8 2 10 0M15 24c2-2 8-2 10 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <div>
+                    <strong>Bademli</strong>
+                    <p>Ağaçtan sofranıza, en taze hâliyle.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#urunler">Ürünler</a>
+                <a href="#hakkimizda">Hikâyemiz</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bademli · Tüm hakları saklıdır.</p>
+            </div>
         </div>
     </footer>
 
     <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
         <div class="cart-header">
-            <h3>Sepetim</h3>
-            <button class="cart-close" id="cartClose" aria-label="Sepeti kapat">✕</button>
+            <div>
+                <h3>Sepetim</h3>
+                <span class="cart-subtitle" id="cartSubtitle">0 ürün</span>
+            </div>
+            <button class="cart-close" id="cartClose" aria-label="Sepeti kapat">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
         </div>
         <div class="cart-items" id="cartItems">
-            <p class="cart-empty">Sepetiniz şu an boş. 🧺</p>
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🧺</div>
+                <p>Sepetiniz şu an boş.</p>
+                <span>Lezzetleri keşfetmeye hazır mısınız?</span>
+            </div>
         </div>
         <div class="cart-footer">
+            <div class="cart-row">
+                <span>Ara toplam</span>
+                <strong id="cartSubtotal">0,00 ₺</strong>
+            </div>
+            <div class="cart-row cart-row-muted">
+                <span>Kargo</span>
+                <span>Ücretsiz</span>
+            </div>
             <div class="cart-total">
-                <span>Toplam:</span>
+                <span>Toplam</span>
                 <strong id="cartTotal">0,00 ₺</strong>
             </div>
-            <button class="btn btn-primary btn-full" id="checkoutBtn">Siparişi Tamamla</button>
+            <button class="btn btn-primary btn-full" id="checkoutBtn">
+                Siparişi Tamamla
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
         </div>
     </aside>
     <div class="overlay" id="overlay"></div>

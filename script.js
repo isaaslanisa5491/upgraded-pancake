@@ -1,4 +1,7 @@
-// Badem Dükkânı - Ürün verileri ve sepet yönetimi
+// Bademli — Ürün verileri ve sepet yönetimi
+
+const IMG_BASE = 'https://images.unsplash.com/';
+const IMG_PARAMS = '?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=800';
 
 const products = [
     {
@@ -6,10 +9,10 @@ const products = [
         name: 'Çiğ İç Badem',
         category: 'cig',
         categoryLabel: 'Çiğ Badem',
-        description: 'Datça bahçelerinden, doğal kurutulmuş, kabuksuz iri taneli çiğ badem.',
+        description: 'Datça bahçelerinden, doğal kurutulmuş, iri taneli çiğ iç badem.',
         price: 420,
-        unit: '/ kg',
-        emoji: '🌰',
+        unit: 'kg',
+        image: 'photo-1579282940892-6152e6e80c52',
         badge: 'Çok Satan'
     },
     {
@@ -17,10 +20,10 @@ const products = [
         name: 'Kabuklu Datça Bademi',
         category: 'cig',
         categoryLabel: 'Çiğ Badem',
-        description: 'Kabuğu ile hasat edilmiş, taze Datça yerli bademi. Uzun ömürlü.',
+        description: 'Kabuğuyla hasat edilmiş, taze Datça yerli bademi. Uzun ömürlü saklama.',
         price: 260,
-        unit: '/ kg',
-        emoji: '🥜',
+        unit: 'kg',
+        image: 'photo-1430163393927-3dab9af7ea38',
         badge: 'Yerli'
     },
     {
@@ -30,8 +33,8 @@ const products = [
         categoryLabel: 'Kavrulmuş',
         description: 'Tuzsuz, yağsız, özel fırında altın rengi kavrulmuş taze badem.',
         price: 480,
-        unit: '/ kg',
-        emoji: '🥜',
+        unit: 'kg',
+        image: 'photo-1535117156854-d5c5243361a8',
         badge: null
     },
     {
@@ -39,10 +42,10 @@ const products = [
         name: 'Tuzlu Kavrulmuş Badem',
         category: 'kavrulmus',
         categoryLabel: 'Kavrulmuş',
-        description: 'Himalaya tuzu ile kavrulmuş, çıtır çıtır, atıştırmalık badem.',
+        description: 'Himalaya tuzu ile kavrulmuş, çıtır çıtır atıştırmalık badem.',
         price: 490,
-        unit: '/ kg',
-        emoji: '🧂',
+        unit: 'kg',
+        image: 'photo-1508779018996-601e37fa274e',
         badge: null
     },
     {
@@ -52,8 +55,8 @@ const products = [
         categoryLabel: 'Kavrulmuş',
         description: 'Anzer balı ile karamelize edilmiş, tatlı-tuzlu özel kavrum.',
         price: 540,
-        unit: '/ kg',
-        emoji: '🍯',
+        unit: 'kg',
+        image: 'photo-1642337241968-48094a7709ea',
         badge: 'Özel'
     },
     {
@@ -63,8 +66,8 @@ const products = [
         categoryLabel: 'Ezme',
         description: 'Tek içerik: %100 badem. Şekersiz, katkısız, kremamsı kıvam.',
         price: 320,
-        unit: '/ 350 gr',
-        emoji: '🥣',
+        unit: '350 gr',
+        image: 'photo-1608797178974-15b35a64ede9',
         badge: 'Organik'
     },
     {
@@ -74,8 +77,8 @@ const products = [
         categoryLabel: 'Ezme',
         description: 'Bitter çikolata ve badem ezmesi karışımı. Kahvaltının vazgeçilmezi.',
         price: 280,
-        unit: '/ 300 gr',
-        emoji: '🍫',
+        unit: '300 gr',
+        image: 'photo-1554298377-9e4df6fd965c',
         badge: null
     },
     {
@@ -83,10 +86,10 @@ const products = [
         name: 'Badem Sütü',
         category: 'sut',
         categoryLabel: 'Süt',
-        description: 'Laktozsuz, vegan, şekersiz. Taze çekilmiş badem sütü.',
+        description: 'Laktozsuz, vegan, şekersiz. Taze çekilmiş doğal badem sütü.',
         price: 95,
-        unit: '/ litre',
-        emoji: '🥛',
+        unit: 'litre',
+        image: 'photo-1601436423474-51738541c1b1',
         badge: 'Vegan'
     },
     {
@@ -96,8 +99,8 @@ const products = [
         categoryLabel: 'Yağ',
         description: 'Yemeklik ve cilt bakımı için saf, soğuk sıkım badem yağı.',
         price: 380,
-        unit: '/ 250 ml',
-        emoji: '🫒',
+        unit: '250 ml',
+        image: 'photo-1608797178948-33eecffb3728',
         badge: null
     },
     {
@@ -107,8 +110,8 @@ const products = [
         categoryLabel: 'Un',
         description: 'Glutensiz tariflerin yıldızı. İnce öğütülmüş, beyaz badem unu.',
         price: 220,
-        unit: '/ 500 gr',
-        emoji: '🌾',
+        unit: '500 gr',
+        image: 'photo-1602485177902-3b5131ee23be',
         badge: 'Glutensiz'
     },
     {
@@ -118,8 +121,8 @@ const products = [
         categoryLabel: 'Tatlı',
         description: 'Ev yapımı, badem unu ile hazırlanmış glutensiz yumuşak kurabiye.',
         price: 180,
-        unit: '/ 400 gr',
-        emoji: '🍪',
+        unit: '400 gr',
+        image: 'photo-1514132687615-019f4d9e1c74',
         badge: null
     },
     {
@@ -129,19 +132,19 @@ const products = [
         categoryLabel: 'Tatlı',
         description: 'Geleneksel İzmir acıbademi. Sadece badem, yumurta akı ve şeker.',
         price: 260,
-        unit: '/ 500 gr',
-        emoji: '🍘',
+        unit: '500 gr',
+        image: 'photo-1554298377-9e4df6fd965c',
         badge: 'Geleneksel'
     },
     {
         id: 13,
-        name: 'Şekerli Badem (Badem Şekeri)',
+        name: 'Şekerli Badem',
         category: 'ozel',
         categoryLabel: 'Şekerleme',
-        description: 'Renkli, sert şeker kaplamalı klasik badem şekeri. Nişan ve düğünlerin vazgeçilmezi.',
+        description: 'Renkli şeker kaplamalı klasik badem şekeri. Nişan ve düğünlerin vazgeçilmezi.',
         price: 240,
-        unit: '/ 500 gr',
-        emoji: '🍬',
+        unit: '500 gr',
+        image: 'photo-1504623912536-fdb14bcb0d1a',
         badge: null
     },
     {
@@ -151,8 +154,8 @@ const products = [
         categoryLabel: 'Şekerleme',
         description: 'Kavrulmuş badem üzerine sütlü ve bitter çikolata kaplama.',
         price: 360,
-        unit: '/ 500 gr',
-        emoji: '🍫',
+        unit: '500 gr',
+        image: 'photo-1504623912536-fdb14bcb0d1a',
         badge: 'Popüler'
     },
     {
@@ -160,10 +163,10 @@ const products = [
         name: 'Çağla (Taze Badem)',
         category: 'ozel',
         categoryLabel: 'Özel',
-        description: 'Sezonluk! İlkbaharın ilk tomurcukları — dalından taze, yumuşak badem.',
+        description: 'Sezonluk! İlkbaharın ilk tomurcukları, dalından taze, yumuşak badem.',
         price: 150,
-        unit: '/ kg',
-        emoji: '🌱',
+        unit: 'kg',
+        image: 'photo-1627820752174-acae1b399128',
         badge: 'Sezonluk'
     },
     {
@@ -173,8 +176,8 @@ const products = [
         categoryLabel: 'Hediye',
         description: '5 farklı badem çeşidinden oluşan, özel kutulanmış premium hediye seti.',
         price: 780,
-        unit: '/ kutu',
-        emoji: '🎁',
+        unit: 'kutu',
+        image: 'photo-1601436423581-9c59173e52d4',
         badge: 'Hediyelik'
     }
 ];
@@ -191,6 +194,8 @@ const cartClose = document.getElementById('cartClose');
 const cartItems = document.getElementById('cartItems');
 const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
+const cartSubtotal = document.getElementById('cartSubtotal');
+const cartSubtitle = document.getElementById('cartSubtitle');
 const overlay = document.getElementById('overlay');
 const checkoutBtn = document.getElementById('checkoutBtn');
 const categoryFilter = document.getElementById('categoryFilter');
@@ -202,9 +207,13 @@ function formatPrice(price) {
     return price.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
 }
 
+function getImageUrl(photoId, width = 800) {
+    return `${IMG_BASE}${photoId}?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=${width}`;
+}
+
 function loadCart() {
     try {
-        const data = localStorage.getItem('badem-dukkani-cart');
+        const data = localStorage.getItem('bademli-cart');
         return data ? JSON.parse(data) : [];
     } catch {
         return [];
@@ -212,7 +221,7 @@ function loadCart() {
 }
 
 function saveCart() {
-    localStorage.setItem('badem-dukkani-cart', JSON.stringify(cart));
+    localStorage.setItem('bademli-cart', JSON.stringify(cart));
 }
 
 function showToast(message) {
@@ -228,24 +237,24 @@ function renderProducts() {
         : products.filter(p => p.category === activeCategory);
 
     productsGrid.innerHTML = filtered.map(product => `
-        <div class="product-card">
+        <article class="product-card">
             <div class="product-image">
                 ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
-                <span>${product.emoji}</span>
+                <img src="${getImageUrl(product.image, 600)}" alt="${product.name}" loading="lazy">
             </div>
             <div class="product-info">
                 <span class="product-category">${product.categoryLabel}</span>
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
                 <div class="product-footer">
-                    <span class="product-price">
+                    <div class="product-price">
                         ${formatPrice(product.price)}
-                        <span class="unit">${product.unit}</span>
-                    </span>
-                    <button class="add-btn" data-id="${product.id}">Sepete Ekle</button>
+                        <span class="unit">/ ${product.unit}</span>
+                    </div>
+                    <button class="add-btn" data-id="${product.id}" aria-label="${product.name} sepete ekle">+</button>
                 </div>
             </div>
-        </div>
+        </article>
     `).join('');
 
     productsGrid.querySelectorAll('.add-btn').forEach(btn => {
@@ -267,7 +276,7 @@ function addToCart(productId) {
 
     saveCart();
     renderCart();
-    showToast(`${product.name} sepete eklendi 🌰`);
+    showToast(`✓ ${product.name} sepete eklendi`);
 }
 
 function removeFromCart(productId) {
@@ -291,23 +300,36 @@ function updateQuantity(productId, delta) {
 function renderCart() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = totalItems;
+    if (cartSubtitle) {
+        cartSubtitle.textContent = `${totalItems} ürün`;
+    }
 
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="cart-empty">Sepetiniz şu an boş. 🌰</p>';
+        cartItems.innerHTML = `
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🧺</div>
+                <p>Sepetiniz şu an boş.</p>
+                <span>Lezzetleri keşfetmeye hazır mısınız?</span>
+            </div>
+        `;
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
-                <div class="cart-item-image">${item.emoji}</div>
+                <div class="cart-item-image">
+                    <img src="${getImageUrl(item.image, 200)}" alt="${item.name}" loading="lazy">
+                </div>
                 <div class="cart-item-info">
                     <h4>${item.name}</h4>
                     <span class="price">${formatPrice(item.price * item.quantity)}</span>
                     <div class="quantity-control">
-                        <button data-action="decrease" data-id="${item.id}">−</button>
+                        <button data-action="decrease" data-id="${item.id}" aria-label="Azalt">−</button>
                         <span>${item.quantity}</span>
-                        <button data-action="increase" data-id="${item.id}">+</button>
+                        <button data-action="increase" data-id="${item.id}" aria-label="Arttır">+</button>
                     </div>
                 </div>
-                <button class="remove-btn" data-action="remove" data-id="${item.id}" aria-label="Ürünü kaldır">🗑️</button>
+                <button class="remove-btn" data-action="remove" data-id="${item.id}" aria-label="Ürünü kaldır">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                </button>
             </div>
         `).join('');
 
@@ -324,6 +346,9 @@ function renderCart() {
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     cartTotal.textContent = formatPrice(total);
+    if (cartSubtotal) {
+        cartSubtotal.textContent = formatPrice(total);
+    }
 }
 
 // Drawer handling
@@ -331,12 +356,14 @@ function openCart() {
     cartDrawer.classList.add('open');
     overlay.classList.add('active');
     cartDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeCart() {
     cartDrawer.classList.remove('open');
     overlay.classList.remove('active');
     cartDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
 }
 
 // Event listeners
@@ -346,10 +373,10 @@ overlay.addEventListener('click', closeCart);
 
 checkoutBtn.addEventListener('click', () => {
     if (cart.length === 0) {
-        showToast('Sepetiniz boş görünüyor 🙂');
+        showToast('Sepetiniz boş görünüyor');
         return;
     }
-    showToast('Siparişiniz alındı! Teşekkürler 🌰');
+    showToast('✓ Siparişiniz alındı! Teşekkürler');
     cart = [];
     saveCart();
     renderCart();
@@ -367,7 +394,7 @@ categoryFilter.addEventListener('click', (e) => {
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    showToast('Mesajınız iletildi, teşekkürler! ✉️');
+    showToast('✓ Mesajınız iletildi, teşekkürler!');
     contactForm.reset();
 });
 
