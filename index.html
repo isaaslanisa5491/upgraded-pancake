@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Köy Pazarı - Doğal Yöresel Ürünler</title>
+    <title>Badem Dükkânı - Doğal Datça Bademi ve Badem Ürünleri</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -11,10 +11,10 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo">
-                <span class="logo-icon">🌾</span>
+                <span class="logo-icon">🌰</span>
                 <div>
-                    <h1>Köy Pazarı</h1>
-                    <p class="tagline">Doğadan sofranıza</p>
+                    <h1>Badem Dükkânı</h1>
+                    <p class="tagline">Ağaçtan tabağınıza</p>
                 </div>
             </div>
             <nav class="main-nav">
@@ -33,16 +33,16 @@
     <section id="anasayfa" class="hero">
         <div class="container hero-inner">
             <div class="hero-text">
-                <h2>Köyden <span class="accent">Doğrudan</span> Sofranıza</h2>
-                <p>Katkısız, organik, taze yöresel ürünler. Ninemin bahçesinden kopup gelen lezzetler artık bir tık uzağınızda.</p>
+                <h2>Anadolu'nun <span class="accent">en taze</span> bademi</h2>
+                <p>Datça'dan Nevşehir'e, Türkiye'nin dört bir yanındaki badem bahçelerinden; çiğ, kavrulmuş, ezme, süt ve daha fazlası. Katkısız, doğal ve taze.</p>
                 <a href="#urunler" class="btn btn-primary">Ürünleri Keşfet</a>
             </div>
             <div class="hero-visual" aria-hidden="true">
                 <div class="hero-card">
-                    <span>🥚</span>
-                    <span>🍎</span>
-                    <span>🍯</span>
-                    <span>🧀</span>
+                    <span>🌰</span>
+                    <span>🥜</span>
+                    <span>🍫</span>
+                    <span>🥛</span>
                 </div>
             </div>
         </div>
@@ -51,24 +51,24 @@
     <section class="features">
         <div class="container features-grid">
             <div class="feature">
-                <div class="feature-icon">🌱</div>
-                <h3>%100 Doğal</h3>
-                <p>Hiçbir kimyasal katkı veya koruyucu madde kullanılmaz.</p>
+                <div class="feature-icon">🌳</div>
+                <h3>Yerli Bahçe</h3>
+                <p>Datça, Nevşehir ve Elazığ'ın yerli badem bahçelerinden doğrudan hasat.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🚜</div>
-                <h3>Taze Hasat</h3>
-                <p>Siparişiniz alındıktan sonra köyden toplanıp gönderilir.</p>
+                <div class="feature-icon">✨</div>
+                <h3>Katkısız</h3>
+                <p>Koruyucu, parlatıcı veya yapay aroma yok. Sadece badem.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🤝</div>
-                <h3>Üreticiye Destek</h3>
-                <p>Doğrudan köylüden alır, emeğin karşılığını veririz.</p>
+                <div class="feature-icon">🥜</div>
+                <h3>Taze Kavrum</h3>
+                <p>Siparişten sonra kavrulur, aroması tazeliğini bozmaz.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🚚</div>
-                <h3>Hızlı Teslimat</h3>
-                <p>Türkiye'nin her yerine soğuk zincirle güvenli teslimat.</p>
+                <h3>Hızlı Kargo</h3>
+                <p>Türkiye'nin her yerine vakumlu, özenli paketleme ile gönderim.</p>
             </div>
         </div>
     </section>
@@ -76,17 +76,18 @@
     <section id="urunler" class="products-section">
         <div class="container">
             <div class="section-head">
-                <h2>Yöresel Ürünlerimiz</h2>
-                <p>Köyün en seçkin, doğal ve taze ürünlerini sizin için bir araya getirdik.</p>
+                <h2>Badem Ürünlerimiz</h2>
+                <p>Çiğ badem, kavrulmuş çeşitler, badem ezmesi, sütü, unu ve özel lezzetler — hepsi tek çatı altında.</p>
             </div>
 
             <div class="category-filter" id="categoryFilter">
                 <button class="filter-btn active" data-category="hepsi">Hepsi</button>
-                <button class="filter-btn" data-category="sut">Süt Ürünleri</button>
-                <button class="filter-btn" data-category="meyve">Meyve & Sebze</button>
-                <button class="filter-btn" data-category="yumurta">Yumurta</button>
-                <button class="filter-btn" data-category="bal">Bal & Reçel</button>
-                <button class="filter-btn" data-category="tahil">Tahıl & Bakliyat</button>
+                <button class="filter-btn" data-category="cig">Çiğ Badem</button>
+                <button class="filter-btn" data-category="kavrulmus">Kavrulmuş</button>
+                <button class="filter-btn" data-category="ezme">Ezme & Krema</button>
+                <button class="filter-btn" data-category="sut">Süt & Yağ</button>
+                <button class="filter-btn" data-category="un">Un & Tatlı</button>
+                <button class="filter-btn" data-category="ozel">Özel Çeşitler</button>
             </div>
 
             <div class="products-grid" id="productsGrid"></div>
@@ -96,33 +97,31 @@
     <section id="hakkimizda" class="about">
         <div class="container about-inner">
             <div class="about-text">
-                <h2>Hikâyemiz</h2>
-                <p>Köy Pazarı, Anadolu'nun dört bir yanındaki küçük üreticileri şehirdeki ailelerle buluşturmak amacıyla kuruldu. Her ürünümüzün ardında emekle çalışan bir çiftçi, bir köylü, bir ana var.</p>
-                <p>Tavuklarımız çayırlarda koşar, inekler otlaklarda otlar, arılar kekik kokulu dağ çiçeklerinden bal toplar. Sofranıza gelen her lezzet, doğanın ve emeğin ortak eseridir.</p>
+                <h2>Bademin Hikâyesi</h2>
+                <p>Badem Dükkânı, Datça yarımadasının rüzgâr almış bahçelerinden Nevşehir'in volkanik topraklarına kadar Anadolu'nun en özel badem ağaçlarını aile sofralarınıza taşır. Her dal, her çekirdek elimizden geçer.</p>
+                <p>Bademlerimiz ilkbaharın son soğuklarında çiçek açar, yazın güneşinde olgunlaşır, elle toplanır ve doğal yollarla kurutulur. Hiçbir kimyasal işleme tabi tutulmaz. İster çiğ, ister kavrulmuş, ister ezme olarak — lezzetin ardındaki emek hep aynı.</p>
                 <div class="about-stats">
                     <div class="stat">
-                        <strong>120+</strong>
-                        <span>Köy Üreticisi</span>
+                        <strong>40+</strong>
+                        <span>Yıllık Ağaç</span>
                     </div>
                     <div class="stat">
-                        <strong>50+</strong>
-                        <span>Doğal Ürün</span>
+                        <strong>25+</strong>
+                        <span>Ürün Çeşidi</span>
                     </div>
                     <div class="stat">
-                        <strong>10.000+</strong>
+                        <strong>15.000+</strong>
                         <span>Mutlu Müşteri</span>
                     </div>
                 </div>
             </div>
             <div class="about-visual" aria-hidden="true">
-                <div class="barn">
-                    <div class="barn-roof"></div>
-                    <div class="barn-body">
-                        <div class="barn-door"></div>
-                        <div class="barn-window"></div>
-                        <div class="barn-window right"></div>
-                    </div>
-                    <div class="grass"></div>
+                <div class="almond-tree">
+                    <div class="tree-foliage"></div>
+                    <div class="tree-foliage secondary"></div>
+                    <div class="tree-blossoms">🌸 🌸 🌸</div>
+                    <div class="tree-trunk"></div>
+                    <div class="ground"></div>
                 </div>
             </div>
         </div>
@@ -132,13 +131,13 @@
         <div class="container">
             <div class="section-head">
                 <h2>Bize Ulaşın</h2>
-                <p>Sorularınız veya sipariş bilgisi için bizimle iletişime geçin.</p>
+                <p>Toptan sipariş, özel kutu veya ürünler hakkında soru için bize yazın.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <p><strong>📍 Adres:</strong> Yeşil Vadi Köyü, Anadolu</p>
+                    <p><strong>📍 Adres:</strong> Datça Bahçeleri, Muğla</p>
                     <p><strong>📞 Telefon:</strong> 0 (850) 123 45 67</p>
-                    <p><strong>✉️ E-posta:</strong> merhaba@koypazari.com</p>
+                    <p><strong>✉️ E-posta:</strong> merhaba@bademdukkani.com</p>
                     <p><strong>🕒 Çalışma:</strong> Pazartesi - Cumartesi 09:00 - 18:00</p>
                 </div>
                 <form class="contact-form" id="contactForm">
@@ -153,7 +152,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Köy Pazarı — Doğanın en taze hâli ile sofralarınızda. 🌾</p>
+            <p>&copy; 2026 Badem Dükkânı — Ağaçtan size en taze hâliyle. 🌰</p>
         </div>
     </footer>
 

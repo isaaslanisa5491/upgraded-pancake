@@ -1,137 +1,181 @@
-// Köy Pazarı - Ürün verileri ve sepet yönetimi
+// Badem Dükkânı - Ürün verileri ve sepet yönetimi
 
 const products = [
     {
         id: 1,
-        name: 'Köy Yumurtası',
-        category: 'yumurta',
-        categoryLabel: 'Yumurta',
-        description: 'Gezen tavuklardan, doğal yemle beslenen, taze köy yumurtası.',
-        price: 120,
-        unit: '/ 15 adet',
-        emoji: '🥚',
+        name: 'Çiğ İç Badem',
+        category: 'cig',
+        categoryLabel: 'Çiğ Badem',
+        description: 'Datça bahçelerinden, doğal kurutulmuş, kabuksuz iri taneli çiğ badem.',
+        price: 420,
+        unit: '/ kg',
+        emoji: '🌰',
         badge: 'Çok Satan'
     },
     {
         id: 2,
-        name: 'Misket Elması',
-        category: 'meyve',
-        categoryLabel: 'Meyve',
-        description: 'Dağ eteklerinde yetişen, mis kokulu yerli misket elması.',
-        price: 55,
+        name: 'Kabuklu Datça Bademi',
+        category: 'cig',
+        categoryLabel: 'Çiğ Badem',
+        description: 'Kabuğu ile hasat edilmiş, taze Datça yerli bademi. Uzun ömürlü.',
+        price: 260,
         unit: '/ kg',
-        emoji: '🍎',
-        badge: 'Taze'
+        emoji: '🥜',
+        badge: 'Yerli'
     },
     {
         id: 3,
-        name: 'Çiçek Balı',
-        category: 'bal',
-        categoryLabel: 'Bal',
-        description: 'Kekik ve yayla çiçeklerinden süzme, katıksız organik bal.',
-        price: 380,
-        unit: '/ 850 gr',
-        emoji: '🍯',
-        badge: 'Organik'
+        name: 'Sade Kavrulmuş Badem',
+        category: 'kavrulmus',
+        categoryLabel: 'Kavrulmuş',
+        description: 'Tuzsuz, yağsız, özel fırında altın rengi kavrulmuş taze badem.',
+        price: 480,
+        unit: '/ kg',
+        emoji: '🥜',
+        badge: null
     },
     {
         id: 4,
-        name: 'Köy Tereyağı',
-        category: 'sut',
-        categoryLabel: 'Süt Ürünleri',
-        description: 'Günlük süzme sütten yapılan, hakiki köy tereyağı.',
-        price: 260,
-        unit: '/ 500 gr',
-        emoji: '🧈',
+        name: 'Tuzlu Kavrulmuş Badem',
+        category: 'kavrulmus',
+        categoryLabel: 'Kavrulmuş',
+        description: 'Himalaya tuzu ile kavrulmuş, çıtır çıtır, atıştırmalık badem.',
+        price: 490,
+        unit: '/ kg',
+        emoji: '🧂',
         badge: null
     },
     {
         id: 5,
-        name: 'Ezine Peyniri',
-        category: 'sut',
-        categoryLabel: 'Süt Ürünleri',
-        description: 'Koyun ve keçi sütü karışımından, tam olgun beyaz peynir.',
-        price: 320,
+        name: 'Ballı Kavrulmuş Badem',
+        category: 'kavrulmus',
+        categoryLabel: 'Kavrulmuş',
+        description: 'Anzer balı ile karamelize edilmiş, tatlı-tuzlu özel kavrum.',
+        price: 540,
         unit: '/ kg',
-        emoji: '🧀',
-        badge: 'Yeni'
+        emoji: '🍯',
+        badge: 'Özel'
     },
     {
         id: 6,
-        name: 'Doğal Süt',
-        category: 'sut',
-        categoryLabel: 'Süt Ürünleri',
-        description: 'Sabah sağımı, hiç işlem görmemiş, taze inek sütü.',
-        price: 45,
-        unit: '/ litre',
-        emoji: '🥛',
-        badge: null
+        name: 'Badem Ezmesi (Kremalı)',
+        category: 'ezme',
+        categoryLabel: 'Ezme',
+        description: 'Tek içerik: %100 badem. Şekersiz, katkısız, kremamsı kıvam.',
+        price: 320,
+        unit: '/ 350 gr',
+        emoji: '🥣',
+        badge: 'Organik'
     },
     {
         id: 7,
-        name: 'Kuru Kayısı',
-        category: 'meyve',
-        categoryLabel: 'Meyve',
-        description: 'Malatya bağlarından güneşte kurutulmuş, kükürtsüz kayısı.',
-        price: 180,
-        unit: '/ 500 gr',
-        emoji: '🍑',
+        name: 'Çikolatalı Badem Ezmesi',
+        category: 'ezme',
+        categoryLabel: 'Ezme',
+        description: 'Bitter çikolata ve badem ezmesi karışımı. Kahvaltının vazgeçilmezi.',
+        price: 280,
+        unit: '/ 300 gr',
+        emoji: '🍫',
         badge: null
     },
     {
         id: 8,
-        name: 'Domates',
-        category: 'meyve',
-        categoryLabel: 'Sebze',
-        description: 'Ata tohumundan yetişmiş, bahçe kokulu köy domatesi.',
-        price: 40,
-        unit: '/ kg',
-        emoji: '🍅',
-        badge: null
+        name: 'Badem Sütü',
+        category: 'sut',
+        categoryLabel: 'Süt',
+        description: 'Laktozsuz, vegan, şekersiz. Taze çekilmiş badem sütü.',
+        price: 95,
+        unit: '/ litre',
+        emoji: '🥛',
+        badge: 'Vegan'
     },
     {
         id: 9,
-        name: 'Gül Reçeli',
-        category: 'bal',
-        categoryLabel: 'Reçel',
-        description: 'Isparta güllerinden el yapımı, geleneksel gül reçeli.',
-        price: 140,
-        unit: '/ 450 gr',
-        emoji: '🌹',
-        badge: 'Geleneksel'
-    },
-    {
-        id: 10,
-        name: 'Kırmızı Mercimek',
-        category: 'tahil',
-        categoryLabel: 'Bakliyat',
-        description: 'Anadolu topraklarından doğal yetişmiş kırmızı mercimek.',
-        price: 85,
-        unit: '/ kg',
-        emoji: '🫘',
+        name: 'Soğuk Sıkım Badem Yağı',
+        category: 'sut',
+        categoryLabel: 'Yağ',
+        description: 'Yemeklik ve cilt bakımı için saf, soğuk sıkım badem yağı.',
+        price: 380,
+        unit: '/ 250 ml',
+        emoji: '🫒',
         badge: null
     },
     {
-        id: 11,
-        name: 'Bulgur',
-        category: 'tahil',
-        categoryLabel: 'Tahıl',
-        description: 'Köy taş değirmeninden, kendir bulgur. Yemeklerin vazgeçilmezi.',
-        price: 60,
-        unit: '/ kg',
+        id: 10,
+        name: 'Badem Unu',
+        category: 'un',
+        categoryLabel: 'Un',
+        description: 'Glutensiz tariflerin yıldızı. İnce öğütülmüş, beyaz badem unu.',
+        price: 220,
+        unit: '/ 500 gr',
         emoji: '🌾',
+        badge: 'Glutensiz'
+    },
+    {
+        id: 11,
+        name: 'Bademli Kurabiye',
+        category: 'un',
+        categoryLabel: 'Tatlı',
+        description: 'Ev yapımı, badem unu ile hazırlanmış glutensiz yumuşak kurabiye.',
+        price: 180,
+        unit: '/ 400 gr',
+        emoji: '🍪',
         badge: null
     },
     {
         id: 12,
-        name: 'Ceviz İçi',
-        category: 'tahil',
-        categoryLabel: 'Kuruyemiş',
-        description: 'Taze hasat, iri taneli, yerli ceviz içi.',
-        price: 420,
+        name: 'Badem Acıbademi',
+        category: 'un',
+        categoryLabel: 'Tatlı',
+        description: 'Geleneksel İzmir acıbademi. Sadece badem, yumurta akı ve şeker.',
+        price: 260,
+        unit: '/ 500 gr',
+        emoji: '🍘',
+        badge: 'Geleneksel'
+    },
+    {
+        id: 13,
+        name: 'Şekerli Badem (Badem Şekeri)',
+        category: 'ozel',
+        categoryLabel: 'Şekerleme',
+        description: 'Renkli, sert şeker kaplamalı klasik badem şekeri. Nişan ve düğünlerin vazgeçilmezi.',
+        price: 240,
+        unit: '/ 500 gr',
+        emoji: '🍬',
+        badge: null
+    },
+    {
+        id: 14,
+        name: 'Çikolata Kaplı Badem',
+        category: 'ozel',
+        categoryLabel: 'Şekerleme',
+        description: 'Kavrulmuş badem üzerine sütlü ve bitter çikolata kaplama.',
+        price: 360,
+        unit: '/ 500 gr',
+        emoji: '🍫',
+        badge: 'Popüler'
+    },
+    {
+        id: 15,
+        name: 'Çağla (Taze Badem)',
+        category: 'ozel',
+        categoryLabel: 'Özel',
+        description: 'Sezonluk! İlkbaharın ilk tomurcukları — dalından taze, yumuşak badem.',
+        price: 150,
         unit: '/ kg',
-        emoji: '🌰',
-        badge: 'Premium'
+        emoji: '🌱',
+        badge: 'Sezonluk'
+    },
+    {
+        id: 16,
+        name: 'Badem Hediye Kutusu',
+        category: 'ozel',
+        categoryLabel: 'Hediye',
+        description: '5 farklı badem çeşidinden oluşan, özel kutulanmış premium hediye seti.',
+        price: 780,
+        unit: '/ kutu',
+        emoji: '🎁',
+        badge: 'Hediyelik'
     }
 ];
 
@@ -160,7 +204,7 @@ function formatPrice(price) {
 
 function loadCart() {
     try {
-        const data = localStorage.getItem('koy-pazari-cart');
+        const data = localStorage.getItem('badem-dukkani-cart');
         return data ? JSON.parse(data) : [];
     } catch {
         return [];
@@ -168,7 +212,7 @@ function loadCart() {
 }
 
 function saveCart() {
-    localStorage.setItem('koy-pazari-cart', JSON.stringify(cart));
+    localStorage.setItem('badem-dukkani-cart', JSON.stringify(cart));
 }
 
 function showToast(message) {
@@ -223,7 +267,7 @@ function addToCart(productId) {
 
     saveCart();
     renderCart();
-    showToast(`${product.name} sepete eklendi 🧺`);
+    showToast(`${product.name} sepete eklendi 🌰`);
 }
 
 function removeFromCart(productId) {
@@ -249,7 +293,7 @@ function renderCart() {
     cartCount.textContent = totalItems;
 
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="cart-empty">Sepetiniz şu an boş. 🧺</p>';
+        cartItems.innerHTML = '<p class="cart-empty">Sepetiniz şu an boş. 🌰</p>';
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
@@ -305,7 +349,7 @@ checkoutBtn.addEventListener('click', () => {
         showToast('Sepetiniz boş görünüyor 🙂');
         return;
     }
-    showToast('Siparişiniz alındı! Teşekkürler 🌾');
+    showToast('Siparişiniz alındı! Teşekkürler 🌰');
     cart = [];
     saveCart();
     renderCart();
